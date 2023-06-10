@@ -4,11 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "npx tsc",
-    "build-frontend": "npm run --prefix ../frontend build && rm -Rf public && cp -R ../frontend/dist public",
-    "dev": "concurrently \"nodemon index.js\" \"npx tsc --watch\"",
-    "start": "node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node dist/server.js",
+    "build": "tsc -src",
+    "dev": "ts-node-dev --no-notify --transpile-only --ignore-watch node_modules src/server.ts"
   },
   "keywords": [],
   "author": "",
