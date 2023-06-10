@@ -11,13 +11,13 @@ import multer from "multer"
 import path from "path"
 import fileUpload from "express-fileupload"
 
-declare module "express-session" {
-  interface Session {
-    user?: {
-      username: string
-    }
-  }
-}
+// declare module "express-session" {
+//   interface Session {
+//     user?: {
+//       username: string
+//     }
+//   }
+// }
 
 dotenv.config()
 
